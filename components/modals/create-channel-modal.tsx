@@ -63,13 +63,13 @@ export const CreateChannelModal = () => {
     }
   });
   
-  useEffect(() => {
-    if (channelType) {
-      form.setValue("type", channelType);
-    } else {
-      form.setValue("type", ChanelType.TEXT);
-    }
-  }, [channelType, form]);
+useEffect(() => {
+  if (channelType) {
+    form.setValue("type", channelType);
+  } else {
+    form.setValue("type", ChanelType.TEXT);
+  }
+}, [channelType, form]); 
   const isLoading = form.formState.isSubmitting;
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
